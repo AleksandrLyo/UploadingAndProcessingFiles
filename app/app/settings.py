@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-dotenv = load_dotenv(BASE_DIR.parent / ".env")
+dotenv = load_dotenv(BASE_DIR / ".env")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-3tfce#0u*qqyh2fipijebo9^ntp1)m3ybuxqpd)_@ycwgo&00h'
