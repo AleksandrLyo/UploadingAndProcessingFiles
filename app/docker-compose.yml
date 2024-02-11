@@ -28,9 +28,9 @@ services:
     ports:
       - "5432:5432"
 
-  redis:
-    image: "redis:alpine"
-    container_name: redis
+  rabbitmq:
+    image: "rabbitmq:latest"
+    container_name: rabbitmq
     restart: always
 
   celery:
@@ -41,7 +41,7 @@ services:
       - .env
     depends_on:
       - web
-      - redis
+      - rabbitmq
 
 volumes:
   postgres-data:
